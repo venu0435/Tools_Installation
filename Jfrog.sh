@@ -21,3 +21,14 @@ ExecStop=-/usr/bin/docker kill artifactory
 ExecStop=-/usr/bin/docker rm artifactory
 [Install]
 WantedBy=multi-user.target
+
+
+
+#Reload Systemd
+sudo systemctl daemon-reload
+#Then start Artifactory container with systemd.
+sudo systemctl start artifactory
+#Enable it to start at system boot.
+sudo systemctl enable artifactory
+#Check whether Artifactory Service is running
+sudo systemctl status artifactory
