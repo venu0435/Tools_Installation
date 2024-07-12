@@ -32,3 +32,6 @@ sudo systemctl start artifactory
 sudo systemctl enable artifactory
 #Check whether Artifactory Service is running
 sudo systemctl status artifactory
+
+#install java
+sudo apt install openjdk-17-jre -y
